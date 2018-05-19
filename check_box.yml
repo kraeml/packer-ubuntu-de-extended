@@ -2,9 +2,9 @@
 - hosts: localhost
   vars:
     box_developer: "kraeml"
-    box_lts: "ubuntu_1804_de"
+    box_lts: "ubuntu_1804_de_base"
     box_name: "{{box_developer}}/{{box_lts}}"
-    box_version: "18.05.11"
+    box_version: "{{lookup('file', '../packer-ubuntu-de-base/version') }}"
     box_ovf_path: "{{ansible_user_dir}}/.vagrant.d/boxes/{{box_developer}}-VAGRANTSLASH-{{box_lts}}/{{box_version}}/virtualbox/"
 
   tasks:
