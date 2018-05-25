@@ -27,8 +27,7 @@
       "galaxy_file": "requirements.yml",
       "extra_arguments": [
           "--skip-tags={{ user `ansible_skip_tags` }}",
-          "--user=vagrant",
-          "-vvv"
+          "--user=vagrant"
       ]
     },
     {
