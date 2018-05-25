@@ -17,7 +17,7 @@
       # Workaround bionic no docker-ce stable could be delete
       apt_repository: "deb [arch={{ apt_repository_arch }}] https://download.docker.com/linux/{{ ansible_distribution|lower }} artful {{ docker_apt_channel }}"
       docker_group_members:
-        - vagrant
+        - "{{ansible_user_id}}"
       tags:
         - docker
 
